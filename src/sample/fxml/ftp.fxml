@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" stylesheets="@../styles/first.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ConnexionController">
+   <children>
+      <Button fx:id="logout" layoutX="29.0" layoutY="576.0" mnemonicParsing="false" onAction="#logout" prefHeight="50.0" prefWidth="50.0" styleClass="btn" stylesheets="@../styles/first.css">
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images_icons/logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Circle fill="DODGERBLUE" layoutX="40.0" layoutY="21.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label layoutX="9.0" layoutY="39.0" text="FTP client " textFill="#ffe100">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <ListView fx:id="listView" layoutX="164.0" layoutY="179.0" prefHeight="347.0" prefWidth="573.0" />
+      <ToolBar layoutX="164.0" layoutY="131.0" prefHeight="40.0" prefWidth="573.0" styleClass="toolbar" stylesheets="@../styles/first.css">
+        <items>
+          <Button mnemonicParsing="false" onAction="#upFolder" prefHeight="0.0" prefWidth="46.0" styleClass="btn" stylesheets="@../styles/first.css">
+               <graphic>
+                  <ImageView fx:id="prev_folder_btn" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images_icons/prev_folder.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#addFolder" prefHeight="0.0" prefWidth="46.0" styleClass="btn" stylesheets="@../styles/first.css">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images_icons/create_new_folder.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button mnemonicParsing="false" onAction="#retrieve" prefHeight="0.0" prefWidth="46.0" styleClass="btn" stylesheets="@../styles/first.css">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images_icons/download.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#store" prefHeight="0.0" prefWidth="46.0" styleClass="btn" stylesheets="@../styles/first.css">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images_icons/store.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#deleFile" prefHeight="0.0" prefWidth="46.0" styleClass="btn" stylesheets="@../styles/first.css">
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images_icons/delete_file.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#rename" styleClass="btn2" text="rename" />
+            <Button fx:id="listBtn" mnemonicParsing="false" onAction="#LIST" styleClass="btn2" text="list" />
+        </items>
+      </ToolBar>
+      <Circle fill="DODGERBLUE" layoutX="900.0" layoutY="664.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label layoutX="830.0" layoutY="601.0" textFill="#ffe100">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="pwdBtn" layoutX="164.0" layoutY="537.0" mnemonicParsing="false" onAction="#getCurrentDirectory" styleClass="btn2" stylesheets="@../styles/first.css" text="répertoire courant &gt;&gt;" textFill="#000000ca">
+         <font>
+            <Font name="Lucida Fax Regular" size="10.0" />
+         </font>
+      </Button>
+      <TextField fx:id="cwd_text_field" layoutX="579.0" layoutY="535.0" />
+      <Button layoutX="507.0" layoutY="537.0" mnemonicParsing="false" onAction="#setCwd_text_field" styleClass="btn2" stylesheets="@../styles/first.css" text="Aller à &gt;&gt;" textFill="#000000ca">
+         <font>
+            <Font name="Lucida Fax Regular" size="10.0" />
+         </font>
+      </Button>
+      <Label fx:id="pwd_label" layoutX="303.0" layoutY="540.0" />
+   </children>
+</AnchorPane>

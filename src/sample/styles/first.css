@@ -1,0 +1,18 @@
+.root
+{
+ -fx-background-color : "white";
+ }
+ .btn
+ {
+  -fx-background-color : "white";
+  }
+
+  .btn2
+  {
+  -fx-background-color : "#ffe66d" ;
+  }
+
+ .toolbar
+  {
+   -fx-background-color : "white";
+   }
